@@ -93,25 +93,26 @@ Introduction to Visual Studio:
     1. Create a Workflow File:
       * In the repository, create .github/workflows/ci.yml.
     2. Define Workflow:
-      yaml
-      name: CI
-      
-      on: [push, pull_request]
-      
-      jobs:
-        build:
-          runs-on: ubuntu-latest
-      
-          steps:
-          - uses: actions/checkout@v2
-          - name: Set up Node.js
-            uses: actions/setup-node@v2
-            with:
-              node-version: '14'
-          - name: Install dependencies
-            run: npm install
-          - name: Run tests
-            run: npm test
+      - yaml file
+        
+        name: CI
+        
+        on: [push, pull_request]
+        
+        jobs:
+          build:
+            runs-on: ubuntu-latest
+        
+            steps:
+            - uses: actions/checkout@v2
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                node-version: '14'
+            - name: Install dependencies
+              run: npm install
+            - name: Run tests
+              run: npm test
 
 What is Visual Studio, and what are its key features? How does it differ from Visual Studio Code?
 Integrating GitHub with Visual Studio:
